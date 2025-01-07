@@ -1,0 +1,10 @@
+from app.entities.base_entity import Base
+from sqlalchemy import Column, Integer, String
+
+class User(Base):
+    __tablename__ = 'user'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    email = Column(String)
+    password = Column(String)
