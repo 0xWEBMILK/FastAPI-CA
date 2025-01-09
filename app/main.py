@@ -11,7 +11,7 @@ from app.configs.database import get_session_stub, database_metadata_init
 def main():
     app = FastAPI()
 
-    engine = create_engine("wo-wo-wo-wo-wo-wo", echo=True)
+    engine = create_engine("what?-hard-connection-in-repo?-yes-cus-its-a-test-repo-lil-smart-boy", echo=True)
     session = sessionmaker(bind=engine)
     database_metadata_init(engine)
 
