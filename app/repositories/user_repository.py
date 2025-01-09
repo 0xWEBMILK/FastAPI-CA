@@ -1,27 +1,8 @@
-from abc import ABC, abstractmethod
 from app.entities.user_entity import User
 from app.utils.hashing import password_hash
 
 
-class AbstractRepository(ABC):
-    @abstractmethod
-    def create(self, name: str, email: str, password: str, money: int):
-        pass
-
-    @abstractmethod
-    def read(self, name: str):
-        pass
-
-    @abstractmethod
-    def update(self, name: str, money: int):
-        pass
-
-    @abstractmethod
-    def delete(self, name: str):
-        pass
-
-
-class UserRepository(AbstractRepository):
+class UserRepository:
     def __init__(self, session):
         self.session = session
 
