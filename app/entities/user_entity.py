@@ -1,12 +1,12 @@
 from app.entities.base_entity import Base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
 
 class User(Base):
     __tablename__ = 'user'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    email = Column(String)
-    password = Column(String)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    email: Mapped[str]
+    password: Mapped[str]
 
-    money = Column(Integer)
+    money: Mapped[int]
